@@ -44,3 +44,16 @@ function renderQuestion (index) {
         optionsElement.appendChild(button);
     });
 }
+
+// Function to check the answer
+function checkAnswer(answer, index) {
+    const resultElement = document.getElementById("result");
+    if (answer === questions[index].answer) {
+        resultElement.textContent = "Correct!";
+    } else {
+        resultElement.textContent = "Incorrect!";
+    }
+}
+
+let currentQuestionIndex = 0;
+renderQuestion(currentQuestionIndex);
