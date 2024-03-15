@@ -57,3 +57,15 @@ function checkAnswer(answer, index) {
 
 let currentQuestionIndex = 0;
 renderQuestion(currentQuestionIndex);
+
+
+// Event listener for the submit button to move to the next question
+document.getElementById("submit").addEventListener("click", () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        renderQuestion(currentQuestionIndex);
+        document.getElementById("result").textContent = "";
+    } else {
+        document.getElementById("quiz-container").innerHTML = "<h2>Quiz Completed!</h2>";
+    }
+});
