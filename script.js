@@ -28,3 +28,19 @@ const questions = [{
 
 ];
 
+//function to renderQuestion
+
+function renderQuestion (index) {
+    const questionElement = document.getElementById("question");
+    const optionsElement = document.getElementById("options");
+
+    questionElement.textContent = questions[index].question;
+    optionsElement.innerHTML = "";
+
+    questions[index].options.forEach(option => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => checkAnswer(option, index);
+        optionsElement.appendChild(button);
+    });
+}
