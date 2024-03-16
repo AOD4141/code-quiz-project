@@ -53,7 +53,7 @@ function startQuiz() {
     instructionsPage.style.display = "none";
     quizLandingPage.style.display = "block";
     readQuestion();
-    readTimer();
+    setTimer();
 }
 function readQuestion() {
     const questionElement = document.getElementById("question");
@@ -69,3 +69,30 @@ function readQuestion() {
         optionsElement.appendChild(button);
     });
 }
+
+function checkAnswer(answer) {
+    const correctSound = document.getElementById("correct-sound");
+    const incorrectSound = document.getElementById("incorrect-sound");
+
+    if (answer === questions[currentQuestionIndex].answer) {
+        score++;
+        correctSound.play();
+    } else {
+        // Reduce time by 10 seconds for incorrect answers
+        timeLeft -= 10;
+        if (timeLeft < 0) {
+            timeLeft = 0;
+        }
+        incorrectSound.play();
+    }
+
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        readQuestion();
+    } else {
+        endQuiz();
+    }
+}
+
+
+
