@@ -107,4 +107,10 @@ function setTimer() {
 }
 
 
+function endQuiz() {
+    quizPage.style.display = "none";
+    scorePage.style.display = "block";
+    finalScoreElement.textContent = `Your Score: ${score}`;
+}
+
 
