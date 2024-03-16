@@ -78,7 +78,7 @@ function checkAnswer(answer) {
         score++;
         correctSound.play();
     } else {
-        // Reduce time by 10 seconds for incorrect answers
+     
         timeLeft -= 10;
         if (timeLeft < 0) {
             timeLeft = 0;
@@ -113,4 +113,15 @@ function endQuiz() {
     finalScoreElement.textContent = `Your Score: ${score}`;
 }
 
+
+saveScoreButton.addEventListener("click", saveScore);
+
+function saveScore() {
+    const initials = initialsInput.value.trim();
+    if (initials !== "") {
+        alert("Score saved successfully!");
+    } else {
+        alert("Please enter your initials.");
+    }
+}
 
