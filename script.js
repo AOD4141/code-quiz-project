@@ -52,7 +52,20 @@ startButton.addEventListener("click", startQuiz);
 function startQuiz() {
     instructionsPage.style.display = "none";
     quizLandingPage.style.display = "block";
-    renderQuestion();
-    renderTimer();
+    readQuestion();
+    readTimer();
 }
+function readQuestion() {
+    const questionElement = document.getElementById("question");
+    const optionsElement = document.getElementById("options");
+    
+    questionElement.textContent = questions[currentQuestionIndex].question;
+    optionsElement.innerHTML = "";
 
+    questions[currentQuestionIndex].options.forEach(option => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => checkAnswer(option);
+        optionsElement.appendChild(button);
+    });
+}
