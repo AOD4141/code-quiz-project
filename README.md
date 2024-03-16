@@ -25,7 +25,7 @@ The purpose is to build a code-quiz with a multiple-choice options using HTML an
 
 ## Link to page
 
-
+https://aod4141.github.io/code-quiz-project/
 
 ## Link to repo
 
