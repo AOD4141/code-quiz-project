@@ -49,3 +49,10 @@ const saveScoreButton = document.getElementById("save-score");
 
 startButton.addEventListener("click", startQuiz);
 
+function startQuiz() {
+    instructionsPage.style.display = "none";
+    quizLandingPage.style.display = "block";
+    renderQuestion();
+    renderTimer();
+}
+
