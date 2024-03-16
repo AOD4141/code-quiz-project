@@ -94,5 +94,17 @@ function checkAnswer(answer) {
     }
 }
 
+function setTimer() {
+    timerElement.textContent = timeLeft;
+    const timerInterval = setInterval(() => {
+        timeLeft--;
+        timerElement.textContent = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            endQuiz();
+        }
+    }, 1000);
+}
+
 
 
