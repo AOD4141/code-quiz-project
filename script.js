@@ -35,3 +35,17 @@ const questions = [
 let currentQuestionIndex = 0;
 let score = 0;
 let timeLeft = 110; 
+
+
+const startButton = document.getElementById("start-button");
+const instructionsPage = document.getElementById("instructions-page");
+const quizLandingPage = document.getElementById("quiz-landingpage");
+const quizContainer = document.getElementById("quiz-container");
+const timerElement = document.getElementById("time");
+const scoreLandingPage = document.getElementById("score-landingpage");
+const finalScoreElement = document.getElementById("final-score");
+const initialsInput = document.getElementById("initials");
+const saveScoreButton = document.getElementById("save-score");
+
+startButton.addEventListener("click", startQuiz);
+
