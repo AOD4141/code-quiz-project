@@ -108,9 +108,9 @@ function setTimer() {
 
 
 function endQuiz() {
-    quizPage.style.display = "none";
-    scorePage.style.display = "block";
-    finalScoreElement.textContent = `Your Score: ${score}`;
+    quizLandingPage.style.display = "none";
+    scoreLandingPage.style.display = "block";
+    finalScoreElement.textContent = `Score: ${score}`;
 }
 
 
