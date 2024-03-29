@@ -1,6 +1,6 @@
 const questions = [
     {
-    question: "Where was the Olympics in 2012 held?",
+    question: "Where was the  2012 Olympics held?",
     options: [ "China" , "UK" , "Rio De Janeiro" , "London" , "Beijing"],
     answer: "London"
 },

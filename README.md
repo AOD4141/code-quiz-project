@@ -19,7 +19,7 @@ The purpose is to build a code-quiz with a multiple-choice options using HTML an
 
 ## Screenshot of the results
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 
 
